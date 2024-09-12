@@ -74,11 +74,39 @@ body {
     color: #000;
 }
 
+.header-logotype div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+    color: #424242;
+    padding-top: 8px;
+}
+
+.header-logotype div img {
+    width: 30px;
+}
+
+.header-logotype div > span {
+    padding-right: 5px;
+}
+
+.header-logotype div > span span {
+    border-bottom: 1px dashed #424242;;
+}
+
 .header-navigation a:nth-child(2) {
     border: 2px solid #000;
     border-radius: 50px;
     padding: 10px 33px;
     margin-left: 35px;
+    transition: 0.2s;
+}
+
+.header-navigation a:nth-child(2):hover {
+    background: var(--mainColor);
+    color: #fff;
+    border: 2px solid var(--mainColor);
 }
 
 /* main */
@@ -108,6 +136,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    margin-top: 30px;
 }
 
 .grey-triangle {
@@ -334,7 +363,7 @@ body {
     background: #fff;
     border-radius: 19px;
     border: 1px solid #000;
-    padding: 130px 50px 30px;
+    padding: 30px 50px;
 }
 
 .book-flex {
@@ -492,6 +521,14 @@ body {
         font-size: 18px;
     }
 
+    .hero-flex img {
+        max-width: 100%;
+    }
+
+    .hero-flex {
+        gap: 10px;
+    }
+
     .header-navigation a:nth-child(2) {
         padding: 6px 10px;
         margin-left: 10px;
@@ -560,6 +597,14 @@ body {
         flex-direction: column;
     }
 
+    .hero-flex img {
+        width: 130px;
+    }
+
+    .header-navigation {
+        display: none;
+    }
+
     .header-navigation {
         padding-top: 15px;
     }
@@ -622,6 +667,57 @@ body {
     .copyright {
         padding-bottom: 20px;
     }
+
+    .form-left {
+        order: 2;
+        margin-top: 15px;
+    }
+
+    .form-right {
+        order: 1;
+    }
+
+    .form-left__list {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .form-left__list li {
+        padding-bottom: 15px;
+    }
+
+    .form-left__user div {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .form-item label {
+        font-size: 17px;
+        padding-bottom: 5px;
+    }
+
+    .text-list {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .text-list li {
+        margin-bottom: 15px;
+    }
+
+    .text-title {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero-flex img {
+        width: 90px;
+    }
+
+    .grey-triangle {
+        height: 30px;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -631,9 +727,16 @@ body {
         line-height: 22px;
     }
 
+    
+
     .hero-title {
-        font-size: 27px;
-        line-height: 32px;
+        font-size: 30px;
+        line-height: 41px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 18px;
     }
 
     .form-content__box {
